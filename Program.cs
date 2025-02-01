@@ -12,7 +12,14 @@
 
         static void Main(string[] args)
         {
-           
+            int purpleTickets = GetNumberOfTickets("Purple");
+            int greenTickets = GetNumberOfTickets("Green");
+            int blueTickets = GetNumberOfTickets("Blue");
+
+            int totalSpent = CalculateTotalMoneySpent(purpleTickets, greenTickets, blueTickets);
+            int averageSpent = CalculateAverageMoneySpent(totalSpent, purpleTickets + greenTickets + blueTickets);
+
+            DisplayResult(totalSpent, averageSpent);
         }
 
         static int GetNumberOfTickets(string ticketType)
