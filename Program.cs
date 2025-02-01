@@ -14,5 +14,28 @@
         {
            
         }
+
+        static int GetNumberOfTickets(string ticketType)
+        {
+            Console.Write("Enter the number of ticket type bought: " + ticketType);
+            return int.Parse(Console.ReadLine());
+        }
+
+        static int CalculateTotalMoneySpent(int purpleTickets, int greenTickets, int blueTickets)
+        {
+            return (purpleTickets) + (greenTickets) + (blueTickets);
+        }
+
+        static int CalculateAverageMoneySpent(int totalSpent, int totalTickets)
+        {
+            return totalTickets > 0 ? 
+                   totalSpent / totalTickets : 0;
+        }
+
+        static void DisplayResult(int totalMoneySpent, int averageSpent)
+        {
+            Console.WriteLine("Total money spent: $" + totalMoneySpent );
+            Console.WriteLine("Average price calculation per game: $" + averageSpent);
+        }
     }
 }
