@@ -23,7 +23,8 @@
 
         static int CalculateTotalMoneySpent(int purpleTickets, int greenTickets, int blueTickets)
         {
-            return (purpleTickets) + (greenTickets) + (blueTickets);
+            int ctms = (purpleTickets * PurplePrice) + (greenTickets * GreenPrice) + (blueTickets * BluePrice); 
+            return ctms;
         }
 
         static int CalculateAverageMoneySpent(int totalSpent, int totalTickets)
